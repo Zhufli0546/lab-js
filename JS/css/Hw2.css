@@ -1,0 +1,121 @@
+a {
+    font-weight: bold;
+    font-size: 150%;
+    color: hotpink;
+    
+}
+body{
+    background-image:url("../img/BG.jpg");
+    background-size: cover;
+}
+
+
+#allpage {
+    width: 1280px;
+    margin: auto;
+   
+}
+
+.manu {
+
+    overflow: auto;
+    list-style-type: none;
+    color: hotpink;
+    /* background-color: black */
+}
+
+.manu li {
+    float: left;
+    width: 10em;
+    border: 10px solid hotpink;
+    margin: 0 20px;
+    border-radius: 20px;
+    
+}
+
+.manu li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5em;
+    background-color: black;
+    
+}
+
+.manu li a:hover {
+    background-color: hotpink;
+    color: black;
+
+}
+.f {
+color: brown;
+font-weight: bold;
+font-size: 150%;
+}
+
+input {
+    height: 30px;
+    width: 180px;
+border-radius: 15px;
+}
+.a {
+width: 300px;
+margin: 15px;
+text-align: right;
+vertical-align: auto;
+font-family: 微軟正黑體;
+color: wheat;
+}
+
+.s {
+width: 100px;
+margin: 15px;
+text-align: right;
+vertical-align: auto;
+font-family: 微軟正黑體;
+color: hotpink;
+font-size: 150%;
+}
+
+.title1 {
+width: 450px;
+border-bottom: 1px solid #000000;
+border: 3px;
+padding: 0;
+/* margin:0px 150px; */
+float: left;
+margin-left: 58px;
+}
+
+.title {
+width: 400px;
+border-bottom: 1px solid #000000;
+border: 3px;
+padding: 0px;
+margin: 40px 70px;
+float: left;
+border-radius: 15px;
+border-left: 100px;
+
+}
+fieldset {
+width: 500px;
+border-radius: 15px;
+border: 6px solid hotpink;
+height: 500px;
+margin: 120px  auto;
+background-color: black;
+
+
+
+}
+
+.kkk{
+color: hotpink;
+font-size: 200%;
+font-weight: bold;
+}
+.c1{
+    color:grey;
+}

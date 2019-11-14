@@ -1,0 +1,93 @@
+a {
+    font-weight: bold;
+    font-size: 150%;
+    color: hotpink;
+    
+}
+body{
+    background-image:url("../img/BG.jpg");
+    background-size: cover;
+}
+
+
+#allpage {
+    width: 1280px;
+   
+    margin: 0 auto;
+   
+}
+
+.manu {
+
+    overflow: auto;
+    list-style-type: none;
+    color: hotpink;
+    /* background-color: black */
+}
+
+.manu li {
+    float: left;
+    width: 10em;
+    border: 10px solid hotpink;
+    margin: 0 20px;
+    border-radius: 20px;
+    
+}
+
+.manu li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5em;
+    background-color: black;
+    
+}
+
+.manu li a:hover {
+    background-color: hotpink;
+    color: black;
+
+}
+
+select{
+    height: 50px;
+    background:transparent;
+    font-size:200%;
+    width: 100px;
+    color: hotpink;
+    
+}
+
+.slc{
+    width: 310px;
+    height:50px;
+    border:5px solid hotpink;
+    margin: 200px auto;
+    border-radius: 15px;
+}
+
+.res{
+    height: 200px;
+    width: 310px;
+    border:5px solid hotpink;
+    margin: -190px auto;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: black;
+    
+}
+
+.res1{
+    margin: 5px 90px;
+    color:hotpink;
+    font-size:22px;
+    width: 250px;
+}
+
+.res2{
+    text-align: center;
+    margin:50px 0;
+    color: hotpink;
+    font-size: 30px
+}

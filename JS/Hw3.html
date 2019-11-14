@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hw3</title>
+    <link rel="stylesheet" type="text/css" href="css/Hw3.css">
+    <script>
+
+        window.onload = function () {
+
+            var star = document.getElementById("star");
+            var star_li = star.getElementsByTagName("li");
+            var star_word = document.getElementById("star_word");
+            var R = document.getElementById("R");
+            var A = document.getElementById("A");
+            var i = 0;
+            var j = 0;
+            var len = star_li.length;
+            var word = ['非常不滿意', '不滿意', '還行', "滿意", "非常滿意"]
+
+            for (i = 0; i < len; i++) {
+                star_li[i].index = i;
+                star_li[i].className = "s";
+                star_li[i].onmouseover = function () {
+                    star_word.style.display="block";
+                    star_word.innerHTML = word[this.index];
+                    for (i = 0; i <= this.index; i++) {
+                        
+                        star_li[i].className = "n";
+                        
+                    }
+                }
+
+                star_li[i].onmouseout = function () {
+                    star_word.style.display = "none";
+                    for (i = 0; i < len; i++) {
+                        star_li[i].className = "s";
+                    }
+                }
+
+                star_li[i].onclick = function () {
+                   
+                    var Hstar = this.index+1;
+
+                         switch(Hstar){
+                             case 1 :R.innerHTML = "<img  src='imgs/star.png'>";
+                                     A.innerHTML="你給一顆心" ;
+                             break;
+
+                             case 2 :R.innerHTML = "<img  src='imgs/star.png'> <img  src='imgs/star.png'>";
+                                     A.innerHTML="你給二顆心" ;
+                             break;
+
+                             case 3 :R.innerHTML = "<img  src='imgs/star.png'> <img  src='imgs/star.png'> <img  src='imgs/star.png'>";
+                                     A.innerHTML="你給三顆心" ;
+                             break;
+
+                             case 4 :R.innerHTML = "<img  src='imgs/star.png'> <img  src='imgs/star.png'> <img  src='imgs/star.png'> <img  src='imgs/star.png'>"
+                                     A.innerHTML="你給四顆心" ;
+                             break;
+
+                             case 5 :R.innerHTML = "<img  src='imgs/star.png'> <img  src='imgs/star.png'> <img  src='imgs/star.png'> <img  src='imgs/star.png'> <img  src='imgs/star.png'>"
+                                     A.innerHTML="你給五顆心" ;
+                             break;
+                         }
+                }
+            }
+        } 
+    </script>
+</head>
+
+<body>
+ 
+        <div id="allpage">
+                <header>
+                    <nav>
+                        <ul class="manu">
+                            <li><a href="Hw1.html">HomeWork 1</a></li>
+                            <li><a href="Hw2.html">HomeWork 2</a></li>
+                            <li><a href="Hw3.html">HomeWork 3</a></li>
+                            <li><a href="Hw4.html">HomeWork 4</a></li>
+                            <li><a href="Hw5.html">HomeWork 5</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                        <div class="A1"> 滿意度:</div>
+                    <div class="b">
+                                    <ul id="star">
+                                        <span id="R">
+                                        <li><img  src="imgs/star.png"></li>
+                                        <li><img  src="imgs/star.png"></li>
+                                        <li><img  src="imgs/star.png"></li>
+                                        <li><img  src="imgs/star.png"></li>
+                                        <li><img  src="imgs/star.png"></li>
+                                    </ul>
+                                    <div></div>
+                                    <div id="star_word" class="A2">一般</div>
+                    </div>
+                
+            
+        
+        <div class="AA">
+                <p id="A" style="font-size: 50px; color:hotpink; font-weight: bold;line-height:150px;"></p>
+            </div>
+</div>
+   
+</body>
+
+</html>

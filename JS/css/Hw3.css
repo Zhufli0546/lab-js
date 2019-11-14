@@ -1,0 +1,109 @@
+.s {
+    filter: grayscale(1);    
+}
+.n {
+    filter: grayscale(0);
+}
+.b{
+    border: 3px solid hotpink;
+    margin: -100px auto 10px auto;
+    width: 530px;
+    height: 90px;
+    background-color: black;
+    padding: 0 auto;
+    border-radius: 60px;
+
+    
+    
+    
+}
+
+#star li {
+    display: inline;   
+}
+
+#star_word {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px;
+    display:none;
+    color: hotpink;
+    text-align: left;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+}
+
+
+.AA{
+    width: 300px;
+    height: 150px;
+    margin: 0  auto;
+    color: hotpink; 
+    text-align: center;
+}
+
+.A1{   
+    width: 200px;
+    color: hotpink;
+    font-size: 50px;
+    margin: 200px auto 10px 20px;    
+    font-weight: bold;
+    font-family: 標楷體;
+   
+}
+
+a {
+    font-weight: bold;
+    font-size: 150%;
+    color: hotpink;
+    
+}
+body{
+    background-image:url("../img/BG.jpg");
+    background-size: cover;
+}
+
+
+#allpage {
+    width: 1280px;
+    margin: auto;
+   
+}
+
+.manu {
+
+    overflow: auto;
+    list-style-type: none;
+    color: hotpink;
+   
+}
+
+.manu li {
+    float: left;
+    width: 10em;
+    border: 10px solid hotpink;
+    margin: 0 20px;
+    border-radius: 20px;
+    
+}
+
+.manu li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5em;
+    background-color: black;
+    
+}
+
+.manu li a:hover {
+    background-color: hotpink;
+    color: black;
+
+}
+
+#star{
+    margin: 0 20px;
+}

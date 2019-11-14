@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-image:url("../img/BG.jpg");
+    background-size: cover;
+}
+#allpage {
+    width: 1280px;
+    margin:auto;
+    /* margin-left: 50%; */
+    
+   
+}
+
+.manu {
+    /* margin: 16px auto; */
+    overflow: auto;
+    list-style-type: none;
+    color: hotpink;
+
+   
+
+}
+
+.manu li {
+    float: left;
+    width: 10em;
+    border: 10px solid hotpink;
+    margin: 0 20px;
+    border-radius: 20px;
+    
+}
+
+.manu li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5em;
+    background-color: black;
+    
+}
+
+.manu li a:hover {
+    background-color: hotpink;
+    color: black;
+
+}
+a {
+    font-weight: bold;
+    font-size: 150%;
+    color: hotpink;
+    
+}
+#main{
+    width:530px;
+    height:287px;
+    padding: 5px 0px;
+    margin: 200px auto;
+    background-color: hotpink;
+
+}
+#img{
+    margin: 0 10px;
+}
+#Play{
+    background-color: black;
+}
+
+#navDiv{
+    width:530px;
+    background-color: hotpink;
+    
+    
+}
+#navDiv a{
+    height: 15px;
+    width: 15px;
+    background-color: hotpink;
+    color:black;
+    margin: 0px 45px;
+    
+    
+}

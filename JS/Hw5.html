@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hw5</title>
+    <link rel="stylesheet" type="text/css" href="css/Hw5.css">
+    <script>
+            window.onload=function(){
+                let slc1 = document.getElementById("slc1");
+                let slc2 = document.getElementById("slc2");
+                let slc3 = document.getElementById("slc3");
+                slc1.onchange = date;
+                slc2.onchange = date;
+                slc3.onchange = res;
+
+                
+
+                for(let i =2010;i<=2020;i++){
+                    let opt = document.createElement("option");
+                    opt.setAttribute("value",i);
+                    let txt = document.createTextNode(i);
+                    opt.appendChild(txt);
+                    slc1.appendChild(opt);
+                }
+
+                for(let i =0 ; i<=12;i++){
+                    let opt = document.createElement("option");
+                    opt.setAttribute("value",i);
+                    let txt = document.createTextNode(i);
+                    opt.appendChild(txt);
+                    slc2.appendChild(opt);
+                }
+                var year=0;
+                var month=0;
+                var date=0;
+                function date(){
+                     year = slc1.value;
+                     month = slc2.value;
+
+                     date = new Date(year,month,0).getDate();
+
+                    document.getElementById("slc3").innerHTML="";
+
+                    for(let i =0 ; i<=date;i++){
+                        let opt = document.createElement("option");
+                        opt.setAttribute("value",i);
+                        let txt = document.createTextNode(i);
+                        opt.appendChild(txt);
+                        slc3.appendChild(opt);
+                        
+                    }
+                }
+                function res(){
+                    date = slc3.value;
+                    document.getElementById("res").innerHTML=`${year} / ${month} / ${date}`;
+                }
+            }
+</script>
+
+</head>
+
+<body>
+
+        <div id="allpage">
+                <header>
+                    <nav>
+                        <ul class="manu">
+                            <li><a href="Hw1.html">HomeWork 1</a></li>
+                            <li><a href="Hw2.html">HomeWork 2</a></li>
+                            <li><a href="Hw3.html">HomeWork 3</a></li>
+                            <li><a href="Hw4.html">HomeWork 4</a></li>
+                            <li><a href="Hw5.html">HomeWork 5</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            
+   <div class="slc">
+        <select id="slc1"></select>
+        <select id="slc2"></select>
+        <select id="slc3"></select>
+    </div>
+    <div class="res">
+        <div class="res1">
+            <span>選擇的日期:</span>
+        </div>
+        <div class="res2">
+                <span id="res"></span>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

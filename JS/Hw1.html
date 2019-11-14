@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hw1</title>
+
+    <link rel="stylesheet" type="text/css" href="css/Hw1.css">
+</head>
+
+<body>
+        <div id="allpage">
+                <header>
+                    <nav>
+                        <ul class="manu">
+                            <li><a href="Hw1.html">HomeWork 1</a></li>
+                            <li><a href="Hw2.html">HomeWork 2</a></li>
+                            <li><a href="Hw3.html">HomeWork 3</a></li>
+                            <li><a href="Hw4.html">HomeWork 4</a></li>
+                            <li><a href="Hw5.html">HomeWork 5</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <script>
+
+                        document.write(`<table rules="cols">`)
+                        document.write("<tr>")
+                        for (var i = 2; i <= 9; i++) {
+                            document.write("<td>")
+                            for (var j = 1; j <= 9; j++) {
+                                a = i * j;
+                                if (a < 10) {
+                                    a = " " + a;
+                                }
+                                document.write(i + "x" + j + "=" + a + "<br>");
+                            }
+                            document.write("</td>");
+                        }
+
+
+                        document.write("</tr>")
+                        document.write("</table>")
+
+                    </script>
+            </div>
+
+
+
+
+
+</body>
+
+</html>

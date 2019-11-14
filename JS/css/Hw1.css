@@ -1,0 +1,67 @@
+table {
+    border: 16px solid hotpink;
+    color: hotpink;
+    font-size: 200%;
+    background: rgb(39,43,55);
+    
+
+
+    margin: 180px auto;
+}
+
+td {
+    border: 3px solid hotpink;
+    font-weight: bold;
+    padding: 20px 20px;
+}
+
+a {
+    font-weight: bold;
+    font-size: 150%;
+    color: hotpink;
+    
+}
+body{
+    background-image:url("../img/BG.jpg");
+    background-size: cover;
+}
+
+
+#allpage {
+    width: 1280px;
+    margin: auto;
+   
+}
+
+.manu {
+
+    overflow: auto;
+    list-style-type: none;
+    color: hotpink;
+    /* background-color: black */
+}
+
+.manu li {
+    float: left;
+    width: 10em;
+    border: 10px solid hotpink;
+    margin: 0 20px;
+    border-radius: 20px;
+    
+}
+
+.manu li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5em;
+    background-color: black;
+    
+}
+
+.manu li a:hover {
+    background-color: hotpink;
+    color: black;
+
+}

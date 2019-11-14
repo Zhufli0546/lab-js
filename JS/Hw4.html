@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hw4</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/Hw4.css">
+
+     <script>
+    window.onload=function(){
+
+            var main = document.getElementById("main");
+            var img = document.getElementById("img");
+            var next =document.getElementById("next");
+            var last =document.getElementById("last");
+            var stop = document.getElementById("stop");
+            var hf = document.getElementById("H");
+            var navDiv = document.getElementById("navDiv");
+            var Alla = navDiv.getElementsByTagName("a");
+            var press = 0;
+            var i=0;
+            var timer;
+            
+            next.onclick=wtn;
+            last.onclick=wtl;
+            stop.onclick=PoS;
+            imgArray=["https://tw.news.yahoo.com/%E7%B1%83%E7%90%83-%E5%8A%A0%E7%9B%9F%E5%AF%8C%E9%82%A6-%E6%9E%97%E5%BF%97%E5%82%91%E9%80%B224%E4%BA%BA%E5%90%8D%E5%96%AE-085550850.html",
+            "https://tw.sports.yahoo.com/news/nba-%E8%B1%AA%E9%9A%8A%E5%8F%8B%E6%A0%BC%E6%9E%97%E5%B0%87%E8%A8%AA%E5%8F%B0-%E5%B0%B1%E5%9C%A8%E9%80%99%E5%A4%A9-054548095.html",
+            "https://tw.sports.yahoo.com/news/nba-%E6%B9%96%E4%BA%BA%E9%A6%96%E5%B8%AD%E8%A8%93%E7%B7%B4%E5%B8%AB-%E5%A5%B9%E6%98%AF%E5%8F%B0%E7%81%A3%E4%BA%BA-041048489.html",
+            "https://tw.news.yahoo.com/%E7%BE%8E%E8%81%B7-%E9%99%B3%E5%81%89%E6%AE%B7%E5%9B%9E%E7%A9%A9-%E7%B8%BD%E6%95%99%E7%B7%B4%E7%9C%8B%E5%88%B0%E5%83%B9%E5%80%BC-040543858.html",
+            "https://tw.news.yahoo.com/%E5%A8%81%E5%8A%9B%E5%BD%A9%E9%80%A3%E6%A7%9346%E6%9C%9F-%E4%B8%8B%E6%9C%9F%E9%A0%AD%E7%8D%8E%E4%B8%8A%E7%9C%8B20-5%E5%84%84-041500418.html"
+            ]
+            turn();   
+            play();
+
+            
+        function turn(){
+                i++;
+                img.src="imgs/"+i+".jpg";
+                hf.href=imgArray[i-1];
+
+                if(i==1){
+            Alla[0].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if(i==2){
+            Alla[1].style.color="red";
+            Alla[0].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if(i==3){
+            Alla[2].style.color="red";
+            Alla[1].style.color="black";
+            Alla[0].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if(i==4){
+            Alla[3].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[0].style.color="black";
+            Alla[4].style.color="black";
+        }else if(i==5){
+            Alla[4].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[0].style.color="black";
+        }    
+                if(i==5){
+                    i=0; 
+               }
+           }                
+        function play(){
+            timer = setInterval(turn,5000);
+        } 
+        function pause(){
+            clearInterval(timer);
+        }
+         function wtn(){
+             i++;
+             if(press%2==0){
+                pause();
+             }
+            var a=i;
+            img.src="imgs/"+(a)+".jpg";
+            hf.href=imgArray[(a+1)-1];
+            if((a)==1){
+            Alla[0].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if((a)==2){
+            Alla[1].style.color="red";
+            Alla[0].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if((a)==3){
+            Alla[2].style.color="red";
+            Alla[1].style.color="black";
+            Alla[0].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if((a)==4){
+            Alla[3].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[0].style.color="black";
+            Alla[4].style.color="black";
+        }else if((a)==5){
+            Alla[4].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[0].style.color="black";
+        }    
+            i=a;
+            
+            
+            if(a==5){
+                a=0;
+                i=a;
+            }
+            
+             play();
+        }
+
+        function wtl(){
+            i--;
+            var k =i;
+            if(press%2==0){
+                pause();
+             }
+             
+            if(k==0){
+                k=5;
+            }
+            img.src="imgs/"+k+".jpg";
+            hf.href=imgArray[(k-1)-1];
+            
+            if((k)==1){
+            Alla[0].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if((k)==2){
+            Alla[1].style.color="red";
+            Alla[0].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if((k)==3){
+            Alla[2].style.color="red";
+            Alla[1].style.color="black";
+            Alla[0].style.color="black";
+            Alla[3].style.color="black";
+            Alla[4].style.color="black";
+        }else if((k)==4){
+            Alla[3].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[0].style.color="black";
+            Alla[4].style.color="black";
+        }else if((k)==5){
+            Alla[4].style.color="red";
+            Alla[1].style.color="black";
+            Alla[2].style.color="black";
+            Alla[3].style.color="black";
+            Alla[0].style.color="black";
+        }
+        i=k;
+        k--;
+        if(k==5){
+            k=5;
+        }
+        play();
+        
+            
+        }
+        
+        function PoS(){
+            press++;
+            if(press%2!=0){
+                stop.src="imgs/play.png";
+                pause();
+                
+            }else{
+                stop.src="imgs/stop.png";
+                play();
+                
+            }
+        }
+
+        for( var h = 0 ;h<Alla.length;h++){
+            Alla[h].index = h;
+
+            Alla[h].onclick = function(){
+                 index = this.index;
+                 img.src="imgs/"+(index+1)+".jpg";
+                 setA();
+             }
+         }
+
+         function setA(){
+             for(var h =0 ;h<Alla.length;h++){
+                Alla[h].style.color="black";
+             }
+
+             Alla[index].style.color="red";
+         }
+
+
+
+        
+
+  
+                
+
+    }
+    </script> 
+</head>
+<body>
+        <div id="allpage">
+                <header>
+                    <nav>
+                        <ul class="manu">
+                            <li><a href="Hw1.html">HomeWork 1</a></li>
+                            <li><a href="Hw2.html">HomeWork 2</a></li>
+                            <li><a href="Hw3.html">HomeWork 3</a></li>
+                            <li><a href="Hw4.html">HomeWork 4</a></li>
+                            <li><a href="Hw5.html">HomeWork 5</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+      
+
+
+    <div id="main">
+        
+            <a id="H" href=""><img id="img" width="510px" height="287px"></a>
+        
+        <div id="navDiv">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
+
+        <div id="Play">
+                <a style="margin: 0 170px;" href="#"><img id="stop" src="imgs/stop.png" width="70px" height="60px"></a>
+                <a style="float: right" href="#"><img id="next" src="imgs/next.png" width="60px" height="60px"></a>
+                <a style="float: left" href="#"><img id="last" src="imgs/last.png" width="60px" height="60px"></a>
+                
+        </div>
+    </div>
+
+</div>
+    
+</body>
+</html>
